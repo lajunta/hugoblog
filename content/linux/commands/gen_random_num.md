@@ -1,6 +1,6 @@
 ---
-title: "Generate random number"
-date: 2021-04-04T23:56:54+08:00
+title: "生成随机数"
+date: 2021-04-06T14:15:57+08:00
 draft: false
 tags: ["linux","commands"]
 ---

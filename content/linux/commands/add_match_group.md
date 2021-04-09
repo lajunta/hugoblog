@@ -1,6 +1,6 @@
 ---
 title: "Add Match Group"
-date: 2021-04-04T23:56:54+08:00
+date: 2021-04-06T14:15:19+08:00
 draft: false
 tags: ["linux","commands"]
 ---
@@ -20,6 +20,7 @@ design=${gnum}_Design
 userdel -r $gname
 rm -rf /home/$gname/
 useradd -m -p "$(openssl passwd -1 $gname)" -s /bin/sh $gname
+chmod a-w $gname
 #sudo -i -u $gname sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #sudo -i -u $gname sed -i "s/robbyrussell/frisk/g" /home/$gname/.zshrc
 sudo -u $gname mkdir -p /home/$gname/$cms

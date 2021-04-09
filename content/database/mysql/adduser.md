@@ -1,6 +1,6 @@
 ---
-title: "Mysql Add User"
-date: 2021-04-04T23:56:54+08:00
+title: "Mysql 添加用户"
+date: 2021-04-06T14:14:52+08:00
 draft: false
 categories: ["mysql"]
 ---

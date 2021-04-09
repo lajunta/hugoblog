@@ -1,6 +1,6 @@
 ---
 title: "Linux Netplan"
-date: 2021-04-04T23:56:54+08:00
+date: 2021-04-06T14:17:04+08:00
 draft: false
 tags: ["linux","sysadmin"]
 ---

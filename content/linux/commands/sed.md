@@ -1,6 +1,6 @@
 ---
-title: "Sed Usage"
-date: 2021-04-04T23:56:54+08:00
+title: "Sed 用法"
+date: 2021-04-06T14:16:20+08:00
 draft: false
 tags: ["linux","commands"]
 ---
