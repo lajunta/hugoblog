@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fronteds on 文章中心</title>
-    <link>/fronted/</link>
+    <link>https://lajunta.github.io/hugoblog/fronted/</link>
     <description>Recent content in Fronteds on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Apr 2021 14:11:51 +0800</lastBuildDate><atom:link href="/fronted/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 14:11:51 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/fronted/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emmet语法</title>
-      <link>/fronted/html/emmet/</link>
+      <link>https://lajunta.github.io/hugoblog/fronted/html/emmet/</link>
       <pubDate>Tue, 06 Apr 2021 14:11:51 +0800</pubDate>
       
-      <guid>/fronted/html/emmet/</guid>
+      <guid>https://lajunta.github.io/hugoblog/fronted/html/emmet/</guid>
       <description>Emmet语法 下一代 &amp;gt; nav&amp;gt;ul&amp;gt;li
 1 2 3 4 5  &amp;lt;nav&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt;   同一代 + div+p+bq
 1 2 3  &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt;   上升一级 ^ div+div&amp;gt;p&amp;gt;span+em^bq

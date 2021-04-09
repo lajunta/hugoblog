@@ -1,4 +1,4 @@
-baseURL: /
+baseURL: https://lajunta.github.io/hugoblog/
 languageCode: zh-cn
 title: 文章中心
 theme: "blog_theme"

@@ -2,107 +2,107 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 文章中心</title>
-    <link>/tags/</link>
+    <link>https://lajunta.github.io/hugoblog/tags/</link>
     <description>Recent content in Tags on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Apr 2021 14:17:04 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 14:17:04 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>linux</title>
-      <link>/tags/linux/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/linux/</link>
       <pubDate>Tue, 06 Apr 2021 14:17:04 +0800</pubDate>
       
-      <guid>/tags/linux/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sysadmin</title>
-      <link>/tags/sysadmin/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/sysadmin/</link>
       <pubDate>Tue, 06 Apr 2021 14:17:04 +0800</pubDate>
       
-      <guid>/tags/sysadmin/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/sysadmin/</guid>
       <description></description>
     </item>
     
     <item>
       <title>commands</title>
-      <link>/tags/commands/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/commands/</link>
       <pubDate>Tue, 06 Apr 2021 14:16:20 +0800</pubDate>
       
-      <guid>/tags/commands/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/commands/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html</title>
-      <link>/tags/html/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/html/</link>
       <pubDate>Tue, 06 Apr 2021 14:11:51 +0800</pubDate>
       
-      <guid>/tags/html/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/html/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/tags/golang/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/golang/</link>
       <pubDate>Tue, 06 Apr 2021 13:04:40 +0800</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>/tags/web/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/web/</link>
       <pubDate>Tue, 06 Apr 2021 13:04:40 +0800</pubDate>
       
-      <guid>/tags/web/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>snippets</title>
-      <link>/tags/snippets/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/snippets/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>/tags/snippets/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/snippets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vim</title>
-      <link>/tags/vim/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/vim/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>/tags/vim/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/vim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vscode</title>
-      <link>/tags/vscode/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/vscode/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>/tags/vscode/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/vscode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>windows</title>
-      <link>/tags/windows/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/windows/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>/tags/windows/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/windows/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wordpress</title>
-      <link>/tags/wordpress/</link>
+      <link>https://lajunta.github.io/hugoblog/tags/wordpress/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>/tags/wordpress/</guid>
+      <guid>https://lajunta.github.io/hugoblog/tags/wordpress/</guid>
       <description></description>
     </item>
     
