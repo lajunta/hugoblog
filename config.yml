@@ -3,6 +3,7 @@ languageCode: zh-cn
 title: 文章中心
 theme: "blog_theme"
 language: zh-cn
+publishDir: docs
 
 params:
   description: "文章中心"

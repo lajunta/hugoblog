@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/css/tailwind.min.min.457dc15ac9728ea8ce51b6ee57135c381611688c4abea2ae8ffded28e7a37daf.css">
+  
+  <link rel="stylesheet" href="/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/categories/" class="ml-5">目录</a>
+        
+        <a href="/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">Basic vscode usage</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/tools/vscode/>tools/vscode/</a></span>
+</div>
+<hr>
+<h1 id="基本用法">基本用法</h1>
+<h2 id="多光标编辑">多光标编辑</h2>
+<ul>
+<li>盒子选择 按<code>shift+alt</code> 拖选 文本块</li>
+<li>按<code>shift+alt+方向键上</code> 或者 <code>shift+alt+方向键下</code>选择在当前光标上或下插入新光标</li>
+<li>按<code>alt+click</code>在任意地方添加光标</li>
+<li>按<code>ctrl+shift+L</code>,可以选定当前的选择的字符的所的实例。</li>
+<li>按<code>ctrl+F2</code>,可以选定当前的选择的字符的所的实例。</li>
+</ul>
+<h2 id="智能提示">智能提示</h2>
+<p><code>ctrl+space</code> 可以出现提示框，显示相应的函数和填充选择</p>
+<h2 id="行操作">行操作</h2>
+<ul>
+<li><code>ctrl+c</code> 拷贝光标当前行</li>
+<li><code>alt+向上/向下</code> 移动当前行或选择的多行</li>
+<li><code>ctrl+shift+k</code> 删除当前行或者选择的多行</li>
+<li><code>ctrl+shift+alt+向上/向下</code> 向上或者向下复制一行或者多行</li>
+<li><code>ctrl+/</code> 注释或者取消 当前行或者多行</li>
+</ul>
+<h2 id="重命名">重命名</h2>
+<ul>
+<li>
+<p>在某个单词或字符串上按 <code>F2</code> 可以选择并修改它，对整个工程文件夹有效</p>
+</li>
+<li>
+<p>也可以右键进行重命名</p>
+</li>
+</ul>
+<h2 id="文档格式化美化排版">文档格式化(美化排版)</h2>
+<ul>
+<li>按 <code>ctrl+shift+I</code>对整篇文档进行重新排版</li>
+<li>按 <code>ctrl+k</code> <code>ctrl+f</code> 对选择的内容进行排版</li>
+</ul>
+<h2 id="代码折叠">代码折叠</h2>
+<ul>
+<li>在要折叠的行 按<code>ctrl+shift+[</code> 进行折叠,按<code>ctrl+shift+]</code>展开</li>
+<li>也可以在点击行号后面的 <code>向下箭头</code>进行折叠</li>
+<li><code>ctrl+k</code> <code>ctrl+0</code> 折叠全部 , <code>ctrl+k</code> <code>ctrl+j</code>展开全部</li>
+</ul>
+<h2 id="跳转">跳转</h2>
+<ul>
+<li><code>Ctrl+P</code> 在多个文档间跳转</li>
+<li><code>F12</code> 跳转到符号定义, 在符号上方按住 <code>Ctrl</code> 可不跳转查看说明或预览</li>
+<li><code>Ctrl+F12</code> 跳转到实现</li>
+<li><code>Ctrl+shift+0</code> 在当前文件的符号间进行跳转</li>
+<li><code>Ctrl+T</code> 在多文件中查找函数或者符号定义</li>
+</ul>
+<h2 id="错误和警告">错误和警告</h2>
+<pre><code>按 `F8`依次跳到不同的出错点进行检查并修改
+</code></pre>
+<h2 id="javascript类型检查">JavaScript类型检查</h2>
+<p>使用 <code>// @ts-check</code> 进行检查 ,<code>// @ts-nocheck</code> 忽略检查</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#6272a4">// @ts-nocheck
+</span><span style="color:#6272a4"></span>
+<span style="color:#8be9fd;font-style:italic">let</span> easy <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+easy <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">42</span>;
+
+</code></pre></td></tr></table>
+</div>
+</div>
+
+    </div></body>
+
+</html>

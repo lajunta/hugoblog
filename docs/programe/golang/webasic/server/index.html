@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/css/tailwind.min.min.457dc15ac9728ea8ce51b6ee57135c381611688c4abea2ae8ffded28e7a37daf.css">
+  
+  <link rel="stylesheet" href="/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/categories/" class="ml-5">目录</a>
+        
+        <a href="/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">Golang Http Server</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/programe/golang/webasic/>programe/golang/webasic/</a></span>
+</div>
+<hr>
+<h2 id="http-server">HTTP Server</h2>
+<h3 id="介绍">介绍</h3>
+<hr>
+<p>一个基本的服务器包括以下几项工作:</p>
+<ul>
+<li>处理动态请求</li>
+<li>提供静态文件服务</li>
+<li>接受连接</li>
+</ul>
+<h3 id="处理动态请求">处理动态请求</h3>
+<hr>
+<p><code>net/http</code>包包括了所有的请求和处理功能，我们能用<code>http.HandleFunc</code>注册一个新的路由。它的第一个参数是一个路径，第二个参数是一个处理函数。</p>
+<p><code>http.Request</code>包括所有请求和参数信息，你可能使用<code>r.URL.Query().Get(&quot;token&quot;)</code> 处理<code>GET</code>参数，使用<code>r.FormValue(&quot;email&quot;)</code>处理 POST 参数。</p>
+<h3 id="静态资源服务">静态资源服务</h3>
+<hr>
+<p>我们使用内置的<code>http.FileServer</code>来处理静态文件如js,css和图片</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">fs <span style="color:#ff79c6">:=</span> http.<span style="color:#50fa7b">FileServer</span>(http.<span style="color:#50fa7b">Dir</span>(<span style="color:#f1fa8c">&#34;static/&#34;</span>))
+</code></pre></td></tr></table>
+</div>
+</div><p>我们的文件服务设置好后，我们需要指定一个路径给它。需要注意的是：我们需要把URL的一部分给去掉，这通常是静态文件的目录名:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">http.<span style="color:#50fa7b">Handle</span>(<span style="color:#f1fa8c">&#34;/static/&#34;</span>,http.<span style="color:#50fa7b">StripPrefix</span>(<span style="color:#f1fa8c">&#34;/static/&#34;</span>,fs))
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="接收请求">接收请求</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go">http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:80&#34;</span>,<span style="color:#ff79c6">nil</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="代码">代码</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#ff79c6">package</span> main
+
+<span style="color:#ff79c6">import</span>(
+    <span style="color:#f1fa8c">&#34;fmt&#34;</span>
+    <span style="color:#f1fa8c">&#34;net/http&#34;</span>
+)
+
+<span style="color:#8be9fd;font-style:italic">func</span> <span style="color:#50fa7b">main</span>(){
+    http.<span style="color:#50fa7b">HandleFunc</span>(<span style="color:#f1fa8c">&#34;/&#34;</span>,<span style="color:#8be9fd;font-style:italic">func</span>(w http.ResponseWriter,r <span style="color:#ff79c6">*</span>http.Request){
+        fmt.<span style="color:#50fa7b">Fprint</span>(w,<span style="color:#f1fa8c">&#34;welcome friend&#34;</span>)
+    })
+
+    fs <span style="color:#ff79c6">:=</span> http.<span style="color:#50fa7b">FileServer</span>(http.<span style="color:#50fa7b">Dir</span>(<span style="color:#f1fa8c">&#34;static/&#34;</span>))
+    http.<span style="color:#50fa7b">Handle</span>(<span style="color:#f1fa8c">&#34;/static/&#34;</span>,http.<span style="color:#50fa7b">StripPrefix</span>(<span style="color:#f1fa8c">&#34;/static/&#34;</span>,fs))
+
+    http.<span style="color:#50fa7b">ListenAndServe</span>(<span style="color:#f1fa8c">&#34;:80&#34;</span>,<span style="color:#ff79c6">nil</span>)
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+
+    </div></body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/css/tailwind.min.min.457dc15ac9728ea8ce51b6ee57135c381611688c4abea2ae8ffded28e7a37daf.css">
+  
+  <link rel="stylesheet" href="/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/categories/" class="ml-5">目录</a>
+        
+        <a href="/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">Systemctl Timer sample</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/linux/sysadmin/>linux/sysadmin/</a></span>
+</div>
+<hr>
+<h1 id="systemctl-service-and-timer">Systemctl Service and Timer</h1>
+<h3 id="服务样本">服务样本</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[Unit]
+Description=Your App Service
+After=network.target
+
+[Service]
+Type=simple
+User=one
+WorkingDirectory=/path/to/your/apps
+Environment=PORT=9009
+Environment=USER=someuser
+Environment=PASSWORD=somepassword
+Restart=on-failure
+RestartSec=5s
+ExecStart=/path/to/your/command
+[Install]
+WantedBy=multi-user.target
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="定时器样本">定时器样本</h3>
+<p><strong>必须和服务同一名称</strong></p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">[Unit]
+Description=Run certbot twice daily
+
+[Timer]
+OnCalendar=*-*-* 00,12:00:00
+RandomizedDelaySec=43200
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+</code></pre></td></tr></table>
+</div>
+</div>
+
+    </div></body>
+
+</html>

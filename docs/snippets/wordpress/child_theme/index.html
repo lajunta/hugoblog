@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="/css/tailwind.min.min.457dc15ac9728ea8ce51b6ee57135c381611688c4abea2ae8ffded28e7a37daf.css">
+  
+  <link rel="stylesheet" href="/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/categories/" class="ml-5">目录</a>
+        
+        <a href="/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">Wordpress child theme</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/snippets/wordpress/>snippets/wordpress/</a></span>
+</div>
+<hr>
+<h1 id="child-theme">Child Theme</h1>
+<h3 id="functionsphp">functions.php</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">9
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#ff79c6">&lt;?</span>php
+<span style="color:#ff79c6">function</span> <span style="color:#50fa7b">add_assets</span>(){
+  wp_enqueue_style(<span style="color:#f1fa8c">&#34;mystyle&#34;</span>,get_stylesheet_uri());
+  wp_enqueue_style(<span style="color:#f1fa8c">&#34;bootstrap_css&#34;</span>, get_stylesheet_directory_uri()<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;/bootstrap.min.css&#34;</span>);
+  wp_enqueue_script(<span style="color:#f1fa8c">&#34;bootstrap_js&#34;</span>, get_stylesheet_directory_uri()<span style="color:#ff79c6">.</span><span style="color:#f1fa8c">&#34;/bootstrap.min.js&#34;</span>);
+}
+
+add_action(<span style="color:#f1fa8c">&#34;wp_enqueue_scripts&#34;</span>,<span style="color:#f1fa8c">&#34;add_assets&#34;</span>);
+<span style="color:#ff79c6">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="stylecss">style.css</h3>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#ff79c6">/*</span>
+<span style="color:#ff79c6">Theme</span> <span style="color:#ff79c6">Name</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">CyberBuf</span>
+<span style="color:#ff79c6">Template</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">blankslate</span>
+<span style="color:#ff79c6">/*</span>
+<span style="color:#ff79c6">*</span>{<span style="color:#ff79c6">margin</span>:<span style="color:#bd93f9">0</span>;<span style="color:#ff79c6">padding</span>:<span style="color:#bd93f9">0</span>;<span style="color:#ff79c6">box-sizing</span>:<span style="color:#ff79c6">border-box</span>}
+</code></pre></td></tr></table>
+</div>
+</div>
+
+    </div></body>
+
+</html>
