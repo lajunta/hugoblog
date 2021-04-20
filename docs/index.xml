@@ -6,14 +6,64 @@
     <description>Recent content on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 09 Apr 2021 11:55:26 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 08:27:20 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vite App With Tailwind</title>
+      <link>https://lajunta.github.io/hugoblog/fronted/vue/vite-app-with-tailwind/</link>
+      <pubDate>Tue, 20 Apr 2021 08:27:20 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/fronted/vue/vite-app-with-tailwind/</guid>
+      <description>Initialize a vitejs app 1 2 3 4  yarn create @vitejs/app cd your app yarn yarn dev   Install tailwindcss 1 2  yarn add -D @tailwindcss/jit tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest npx tailwindcss init -p   ###modify postcss.config.js
+1 2 3 4 5 6  1 module.exports = { 2 plugins: { 3 &amp;#39;@tailwindcss/jit&amp;#39;: {}, 4 autoprefixer: {}, 5 }, 6 }   modify tailwindcss.config.js remove unused classes 1  purge: [&amp;#39;.</description>
+    </item>
+    
+    <item>
+      <title>Crypto101</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</link>
+      <pubDate>Sun, 18 Apr 2021 09:28:57 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suid Sgid Sticky Bit</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</link>
+      <pubDate>Sat, 17 Apr 2021 09:31:33 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</guid>
+      <description>Linux special directory/file permission setup SUID (+s | numercial code 4) 只有文件的所有者才能执行， 其它人不能执行
+1  chmod 4770 file   SGID (+s | numercial code 2) 只有组的所有者才能执行，其它人不能执行
+1  chmod 2770 file | directory    如果设置在文件上,和suid一样，只有组的成员才能执行 如果设置在目录上,目录内新建的文件都会继承所在目录的组权限  Sticky bit (+t | numercial code 1) 只能加在目录上,目录内的文件,只有其所有者才能删除
+1  chmod 1777 file   1 2  [one@server test]$ ls -ld /tmp/ drwxrwxrwt. 15 root root 4096 Sep 28 19:28 /tmp/   </description>
+    </item>
+    
+    <item>
+      <title>Samba Guest Write</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-guest-write/</link>
+      <pubDate>Sat, 10 Apr 2021 09:26:46 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-guest-write/</guid>
+      <description>Samba Server for guest user smb.conf
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  # Global parameters [global] server string = Temp Samba Server netbios name = R33 server role = standalone server map to guest = bad user guest account = zxy create mode = 664 inherit owner=yes inherit permissions=yes [文件收集] path = /var/collect read only = no writeable = yes write list = zxy public = yes guest ok = yes force user = zxy create mask = 0644 directory mask = 1777   File System operations 设置文件或者文件夹 不是文件夹所在组和用户</description>
+    </item>
+    
+    <item>
+      <title>Wordpress_steps</title>
+      <link>https://lajunta.github.io/hugoblog/programe/php/wordpress_steps/</link>
+      <pubDate>Fri, 09 Apr 2021 18:04:07 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/php/wordpress_steps/</guid>
+      <description>第三部分同学  明白各文件的意义  index.php functions.php 自定义函数 style.css 样式 single.php 文章 page.php 页面 category.php 列表    </description>
+    </item>
+    
     <item>
       <title>Get Json From Url</title>
       <link>https://lajunta.github.io/hugoblog/programe/php/get_json_from_url/</link>
       <pubDate>Fri, 09 Apr 2021 11:55:26 +0800</pubDate>
       
       <guid>https://lajunta.github.io/hugoblog/programe/php/get_json_from_url/</guid>
-      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  &amp;lt;?php // set location $address = &amp;#34;Brooklyn+NY+USA&amp;#34;; //set map api url $url = &amp;#34;http://maps.google.com/maps/api/geocode/json?address=$address&amp;#34;; //call api $json = file_get_contents($url); $json = json_decode($json); $lat = $json-&amp;gt;results[0]-&amp;gt;geometry-&amp;gt;location-&amp;gt;lat; $lng = $json-&amp;gt;results[0]-&amp;gt;geometry-&amp;gt;location-&amp;gt;lng; echo &amp;#34;Latitude: &amp;#34; . $lat . &amp;#34;, Longitude: &amp;#34; . $lng; // output // Latitude: 40.6781784, Longitude: -73.9441579 ?&amp;gt;   </description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57  &amp;lt;?php get_header(); $url = &amp;#34;http://10.2.110.120:8080/wp-json/cyberbuf/news&amp;#34;; $json = file_get_contents($url); $news = json_decode($json); ?&amp;gt; &amp;lt;?</description>
     </item>
     
     <item>
@@ -95,7 +145,7 @@
       <pubDate>Tue, 06 Apr 2021 14:15:57 +0800</pubDate>
       
       <guid>https://lajunta.github.io/hugoblog/linux/commands/gen_random_num/</guid>
-      <description>生成随机数 xxd 1  xxd -g 2 -l 64 -p /dev/random | tr -d &amp;#34;\n&amp;#34;   </description>
+      <description>生成随机数 xxd 1  xxd -g 2 -l 64 -p /dev/random | tr -d &amp;#34;\n&amp;#34;   openssl 1  openssl passwd -5 -salt xyz &amp;#34;yourpassword&amp;#34; | base64   head 1  cat /dev/urandom | base32 | head -c 64   </description>
     </item>
     
     <item>
@@ -108,12 +158,12 @@
     </item>
     
     <item>
-      <title>Mysql 添加用户</title>
-      <link>https://lajunta.github.io/hugoblog/database/mysql/adduser/</link>
+      <title>Mysql Basic</title>
+      <link>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</link>
       <pubDate>Tue, 06 Apr 2021 14:14:52 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/database/mysql/adduser/</guid>
-      <description>Add and Grand user 1 2 3 4 5 6 7  CREATE DATABASE database_name; CREATE USER &amp;#39;newuser&amp;#39;@&amp;#39;10.8.0.5&amp;#39; IDENTIFIED BY &amp;#39;user_password&amp;#39;; GRANT ALL PRIVILEGES ON database_name.* TO &amp;#39;database_user&amp;#39;@&amp;#39;localhost&amp;#39;;   </description>
+      <guid>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</guid>
+      <description>Add and Grand user 1 2 3 4 5 6 7  CREATE DATABASE database_name; CREATE USER &amp;#39;newuser&amp;#39;@&amp;#39;10.8.0.5&amp;#39; IDENTIFIED BY &amp;#39;user_password&amp;#39;; GRANT ALL PRIVILEGES ON database_name.* TO &amp;#39;database_user&amp;#39;@&amp;#39;localhost&amp;#39;;   Alter user password 1  alter user &amp;#39;username&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;user_password&amp;#39;;   Drop user 1  drop user &amp;#39;user&amp;#39;@&amp;#39;localhost&amp;#39;;   </description>
     </item>
     
     <item>

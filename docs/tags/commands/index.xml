@@ -31,7 +31,7 @@
       <pubDate>Tue, 06 Apr 2021 14:15:57 +0800</pubDate>
       
       <guid>https://lajunta.github.io/hugoblog/linux/commands/gen_random_num/</guid>
-      <description>生成随机数 xxd 1  xxd -g 2 -l 64 -p /dev/random | tr -d &amp;#34;\n&amp;#34;   </description>
+      <description>生成随机数 xxd 1  xxd -g 2 -l 64 -p /dev/random | tr -d &amp;#34;\n&amp;#34;   openssl 1  openssl passwd -5 -salt xyz &amp;#34;yourpassword&amp;#34; | base64   head 1  cat /dev/urandom | base32 | head -c 64   </description>
     </item>
     
     <item>
