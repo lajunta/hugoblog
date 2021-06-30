@@ -2,23 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lajunta.github.io/hugoblog/programe/</loc>
+    <lastmod>2021-06-30T08:34:10+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/programe/golang/webasic/web-app-steps/</loc>
+    <lastmod>2021-06-30T08:34:10+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/</loc>
+    <lastmod>2021-06-30T08:34:10+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/linux/</loc>
+    <lastmod>2021-06-29T16:40:14+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-printer/</loc>
+    <lastmod>2021-06-29T16:40:14+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/linux/sysadmin/wireguard/</loc>
+    <lastmod>2021-06-07T08:34:10+08:00</lastmod>
+  </url><url>
+    <loc>https://lajunta.github.io/hugoblog/programe/golang/grpc/filedownload/</loc>
+    <lastmod>2021-04-29T09:25:49+08:00</lastmod>
+  </url><url>
     <loc>https://lajunta.github.io/hugoblog/fronted/</loc>
     <lastmod>2021-04-20T08:27:20+08:00</lastmod>
   </url><url>
     <loc>https://lajunta.github.io/hugoblog/fronted/vue/vite-app-with-tailwind/</loc>
     <lastmod>2021-04-20T08:27:20+08:00</lastmod>
   </url><url>
-    <loc>https://lajunta.github.io/hugoblog/</loc>
-    <lastmod>2021-04-20T08:27:20+08:00</lastmod>
-  </url><url>
     <loc>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</loc>
     <lastmod>2021-04-18T09:28:57+08:00</lastmod>
-  </url><url>
-    <loc>https://lajunta.github.io/hugoblog/programe/</loc>
-    <lastmod>2021-04-18T09:28:57+08:00</lastmod>
-  </url><url>
-    <loc>https://lajunta.github.io/hugoblog/linux/</loc>
-    <lastmod>2021-04-17T09:31:33+08:00</lastmod>
   </url><url>
     <loc>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</loc>
     <lastmod>2021-04-17T09:31:33+08:00</lastmod>

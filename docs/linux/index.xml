@@ -6,7 +6,27 @@
     <description>Recent content in Linuxes on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 17 Apr 2021 09:31:33 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jun 2021 16:40:14 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Printer Share Using Samba On Ubuntu</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-printer/</link>
+      <pubDate>Tue, 29 Jun 2021 16:40:14 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-printer/</guid>
+      <description>Printer Share On Ubuntu Edit smb.conf 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  [printers] comment = All Printers browseable = no path = /var/spool/samba printable = yes guest ok = no read only = yes create mask = 0700 valid users = dayin [print$] comment = Printer Drivers path = /var/lib/samba/printers browseable = yes read only = yes guest ok = no valid users = dayin   Add user dayin 1 2  sudo useradd -M -N -s /bin/false -d /nonexsistent dayin sudo smbpasswd -a dayin   Add creditial on windows 1 2 3  ip: server ip user: dayin psd: smbpasswd for dayin   </description>
+    </item>
+    
+    <item>
+      <title>Wireguard</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/wireguard/</link>
+      <pubDate>Mon, 07 Jun 2021 08:34:10 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/wireguard/</guid>
+      <description>wireguard Links   Archlinux Wireguard Tutorial
+  VPN Server
+  配置网络界面 1  ip link add dev wg0 type wireguard    增加IP地址  1 2 3 4  ip address add dev wg0 192.168.88.1/24 # 如果只是二个电脑相联 ip address add dev wg0 192.168.88.1 peer 192.168.88.2   通过配置文件进行配置  1  wg setconf wg0 myconfig.conf   激活界面  1  ip link set up dev wg0   查看显示界面 1 2 3  wg wg show wg showconf   生成钥匙 生成私钥</description>
+    </item>
+    
     <item>
       <title>Suid Sgid Sticky Bit</title>
       <link>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</link>

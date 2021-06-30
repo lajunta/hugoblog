@@ -6,7 +6,25 @@
     <description>Recent content in Programes on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 18 Apr 2021 09:28:57 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/programe/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 08:34:10 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/programe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web App Steps</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/web-app-steps/</link>
+      <pubDate>Wed, 30 Jun 2021 08:34:10 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/web-app-steps/</guid>
+      <description>Golang web app steps First make a web server 1 2 3 4 5 6  func home(w http.ResponseWriter, r *http.Request) { tmpl.ExecuteTemplate(w, &amp;#34;Home&amp;#34;, nil) } http.HandleFunc(&amp;#34;/&amp;#34;,home) http.ListenAndServe(&amp;#34;:8080&amp;#34;,nil)   Second make assets dir and path 1 2 3 4 5 6  //go:embed static/* views/* var assets embed.FS // add assets path http.Handle(&amp;#34;/assets/&amp;#34;, http.StripPrefix(&amp;#34;/assets/&amp;#34;, http.FileServer(http.FS(assets))))   Make template file and code 1 2 3 4 5 6  var ( tmpl *template.</description>
+    </item>
+    
+    <item>
+      <title>Using Grpc Transfer Binary File</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/grpc/filedownload/</link>
+      <pubDate>Thu, 29 Apr 2021 09:25:49 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/grpc/filedownload/</guid>
+      <description>Proto file 1 2 3 4 5 6 7 8 9 10 11 12  syntax = &amp;#34;proto3&amp;#34;; message Response { bytes fileChunk = 1; } message Request { string fileName = 1; } service TestService { rpc Download(Request) returns (stream Response); }   Server code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28  func (srv *Server) Download(req *pbgo.</description>
+    </item>
+    
     <item>
       <title>Crypto101</title>
       <link>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</link>
