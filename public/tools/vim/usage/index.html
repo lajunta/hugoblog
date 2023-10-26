@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://lajunta.github.io/hugoblog/css/tailwind.min.min.d9a9ae40100d24a1171de2958f7a2561352df9d0606cdb4d6ea39e37d79f150e.css">
+  
+  <link rel="stylesheet" href="https://lajunta.github.io/hugoblog/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=https://lajunta.github.io/hugoblog/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/hugoblog/categories/" class="ml-5">目录</a>
+        
+        <a href="/hugoblog/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">vim usage</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/tools/vim/>tools/vim/</a></span>
+</div>
+<hr>
+<h1 id="usage">usage</h1>
+<ul>
+<li>Category: tools/vim</li>
+<li>Tags:</li>
+<li>Created: 2020-11-04T16:11:56+08:00</li>
+</ul>
+<h3 id="new--and--save">New  and  Save</h3>
+<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>:new file   <span style="color:#6272a4"># new window above current window</span>
+</span></span><span style="display:flex;"><span>:vert new file <span style="color:#6272a4"># new window right current window</span>
+</span></span><span style="display:flex;"><span>:e filename <span style="color:#6272a4"># edit file</span>
+</span></span><span style="display:flex;"><span>:w          <span style="color:#6272a4"># write current file</span>
+</span></span><span style="display:flex;"><span>:w filename <span style="color:#6272a4"># write to another file</span>
+</span></span><span style="display:flex;"><span>:q          <span style="color:#6272a4"># quit and close current file</span>
+</span></span><span style="display:flex;"><span>:q!         <span style="color:#6272a4"># without and alert</span>
+</span></span><span style="display:flex;"><span>:x          <span style="color:#6272a4"># write and quit</span>
+</span></span><span style="display:flex;"><span>:wa         <span style="color:#6272a4"># write all window file</span>
+</span></span><span style="display:flex;"><span>:qa         <span style="color:#6272a4"># quit all window</span>
+</span></span><span style="display:flex;"><span>:xa         <span style="color:#6272a4"># write and quit all window</span>
+</span></span><span style="display:flex;"><span>:qa!        <span style="color:#6272a4"># quit all window without alert</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="move-and-more">Move and more</h3>
+<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* gg moves to first line, G moves to last line, 123G moves to line number 123.
+</span></span><span style="display:flex;"><span>* Use u to undo and Ctrl-r to redo, multiple times.
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="run-shell-command">Run shell command</h3>
+<hr>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>:! cmd      <span style="color:#6272a4"># execute an command</span>
+</span></span><span style="display:flex;"><span>:! %        <span style="color:#6272a4"># execute current file</span>
+</span></span><span style="display:flex;"><span>:!          <span style="color:#6272a4"># ececute last command</span>
+</span></span><span style="display:flex;"><span>:r !cmd     <span style="color:#6272a4"># insert command output into current file</span>
+</span></span><span style="display:flex;"><span>:silent !cmd    <span style="color:#6272a4"># ignore the enter hit when cmd done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="window-operation">Window Operation</h3>
+<hr>
+<p><strong>Move</strong></p>
+<blockquote>
+<p><code>CTRL+W</code> then <code>W</code> <code>H</code> <code>J</code> <code>K</code> <code>L</code> to move <code>Next</code> <code>Left</code> <code>Below</code> <code>Above</code> <code>Right</code> Window</p>
+</blockquote>
+<p><strong>Split</strong></p>
+<ul>
+<li><code>:vsp</code>            # without file</li>
+<li><code>:vsp filename</code>   # vertical split window</li>
+<li><code>:sp filename</code>    # horizontal split window</li>
+</ul>
+
+
+    </div></body>
+
+</html>

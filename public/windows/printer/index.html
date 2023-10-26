@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://lajunta.github.io/hugoblog/css/tailwind.min.min.d9a9ae40100d24a1171de2958f7a2561352df9d0606cdb4d6ea39e37d79f150e.css">
+  
+  <link rel="stylesheet" href="https://lajunta.github.io/hugoblog/css/style.min.c0ad41ced7523ea8a0f933c901c8da089bf513df82f78df868dfee4406c85f57.css">
+  <title>Document</title>
+</head><body><header class="bg-white mb-3">
+  <div class="container mx-auto px-10">
+    <nav class="flex h-20 items-center justify-between">
+      <a href=https://lajunta.github.io/hugoblog/ class="text-4xl">文章中心</a>
+
+      <div>
+        
+        <a href="/hugoblog/categories/" class="ml-5">目录</a>
+        
+        <a href="/hugoblog/tags/" class="ml-5">标签</a>
+        
+      </div>
+    </nav>
+  </div>
+</header><div class="container mx-auto p-10 bg-white ">
+<div class="text-2xl text-gray-700 mb-4">Printer share</div>
+<div class="mb-3 text-xs">
+  <span datetime=" 2021-04-04 23:56" class="text-gray-300">2021-04-04 23:56</span>
+  <span class="mr-4 text-gray-300 italic"> <a href=/windows/>windows/</a></span>
+</div>
+<hr>
+<h3 id="win10设置共享访问时提示需要密码的解决">Win10设置共享访问时提示需要密码的解决</h3>
+<p>适用于Win7、Win8、Win8.1、Win10在设置共享后，其它电脑访问共享时提示需要密码的解决方法。</p>
+<ol>
+<li>
+<p>计算机（右键）》管理》本地用户和组》Guest（右键-设置密码-确定）即空密码。</p>
+</li>
+<li>
+<p>计算机（右键）》管理》本地用户和组》Guest（右键-取消帐户已禁用，点选“用户不能更改密码”和“密码永不过期”</p>
+</li>
+<li>
+<p>控制面板》网络和共享中心》更改高级共享设置》打开“启用文件和打印机共享”，点选 “关闭密码保护共享 ”</p>
+</li>
+<li>
+<p>调出“运行”（WIN7下：开始》运行；WIN8下 win+X）输入 gpedit.msc本地计算机策略》WINDOWS设置》安全设置》本地策略》安全选项》找到网络安全：LAN管理器身份验证级别（双击，设置为：仅发送NTLM响应)</p>
+</li>
+<li>
+<p>同时设置：本地计算机策略》WINDOWS设置》安全设置》本地策略》用户权限分配》拒绝从网络访问这台计算机（双击打开，删除里面的所有用户。</p>
+</li>
+<li>
+<p>计算机（右键）》管理》服务和应用程序》服务》TCP/IP NetBIOS Helper为启用状态。</p>
+</li>
+<li>
+<p>完成。搞定以上所有设置。共享需要密码，网络无法访问等问题都可解决。（前提局域是畅通的情况下）。</p>
+</li>
+</ol>
+
+
+    </div></body>
+
+</html>

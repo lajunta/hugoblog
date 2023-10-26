@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on 文章中心</title>
+    <link>https://lajunta.github.io/hugoblog/tags/windows/</link>
+    <description>Recent content in windows on 文章中心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 04 Apr 2021 23:56:54 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Excel index and match </title>
+      <link>https://lajunta.github.io/hugoblog/windows/indexmatch/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/windows/indexmatch/</guid>
+      <description>Index and Match Match 语法 ** Match函数**
+使用 MATCH 函数在 范围 单元格中搜索特定的项，然后返回该项在此区域中的相对位置。
+MATCH(lookup_value, lookup_array, [match_type])
+MATCH 函数语法具有下列参数：
+1 2 3 4 5 6 7 lookup_value 必需。 要在 lookup_array 中匹配的值。 lookup_value 参数可以为值（数字、文本或逻辑值）或对数字、文本或逻辑值的单元格引用。 lookup_array 必需。 要搜索的单元格区域。 match_type 可选。 数字 -1、0 或 1。 此参数的默认值为 1 Match_type 行为 Match_type 行为 1 或省略 MATCH 查找小于或等于 lookup_value 的最大值。 lookup_array 参数中的值必须以升序排序，例如：&amp;hellip;-2, -1, 0, 1, 2, &amp;hellip;, A-Z, FALSE, TRUE。 0 MATCH 查找完全等于 lookup_value 的第一个值。 lookup_array 参数中的值可按任何顺序排列。 -1 MATCH 查找大于或等于 lookup_value 的最小值。 lookup_array 参数中的值必须按降序排列，例如：TRUE, FALSE, Z-A, &amp;hellip;2, 1, 0, -1, -2, &amp;hellip; 等等。 例子 农产品 计数 香蕉 二十五 橙子 38 苹果 40 梨 41 公式 说明 结果 =MATCH(39,B2:B5,1) 由于此处无精确匹配项，因此函数会返回单元格区域 B2:B5 中最接近的下个最小值 (38) 的位置。 2 =MATCH(41,B2:B5,0) 单元格区域 B2:B5 中值 41 的位置。 4 Index 语法 INDEX 函数返回表格或区域中的值或值的引用。</description>
+    </item>
+    
+    <item>
+      <title>Printer share</title>
+      <link>https://lajunta.github.io/hugoblog/windows/printer/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/windows/printer/</guid>
+      <description>Win10设置共享访问时提示需要密码的解决 适用于Win7、Win8、Win8.1、Win10在设置共享后，其它电脑访问共享时提示需要密码的解决方法。
+计算机（右键）》管理》本地用户和组》Guest（右键-设置密码-确定）即空密码。
+计算机（右键）》管理》本地用户和组》Guest（右键-取消帐户已禁用，点选“用户不能更改密码”和“密码永不过期”
+控制面板》网络和共享中心》更改高级共享设置》打开“启用文件和打印机共享”，点选 “关闭密码保护共享 ”
+调出“运行”（WIN7下：开始》运行；WIN8下 win+X）输入 gpedit.msc本地计算机策略》WINDOWS设置》安全设置》本地策略》安全选项》找到网络安全：LAN管理器身份验证级别（双击，设置为：仅发送NTLM响应)
+同时设置：本地计算机策略》WINDOWS设置》安全设置》本地策略》用户权限分配》拒绝从网络访问这台计算机（双击打开，删除里面的所有用户。
+计算机（右键）》管理》服务和应用程序》服务》TCP/IP NetBIOS Helper为启用状态。
+完成。搞定以上所有设置。共享需要密码，网络无法访问等问题都可解决。（前提局域是畅通的情况下）。</description>
+    </item>
+    
+  </channel>
+</rss>

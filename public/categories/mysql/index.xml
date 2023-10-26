@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on 文章中心</title>
+    <link>https://lajunta.github.io/hugoblog/categories/mysql/</link>
+    <description>Recent content in mysql on 文章中心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 06 Apr 2021 14:14:52 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql Basic</title>
+      <link>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</link>
+      <pubDate>Tue, 06 Apr 2021 14:14:52 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</guid>
+      <description>Add and Grand user 1 2 3 4 5 6 CREATE DATABASE database_name; CREATE USER &amp;#39;newuser&amp;#39;@&amp;#39;10.8.0.5&amp;#39; IDENTIFIED BY &amp;#39;user_password&amp;#39;; GRANT ALL PRIVILEGES ON database_name.* TO &amp;#39;database_user&amp;#39;@&amp;#39;localhost&amp;#39;; Alter user password 1 alter user &amp;#39;username&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;user_password&amp;#39;; Drop user 1 drop user &amp;#39;user&amp;#39;@&amp;#39;localhost&amp;#39;; </description>
+    </item>
+    
+  </channel>
+</rss>

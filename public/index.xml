@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章中心</title>
+    <link>https://lajunta.github.io/hugoblog/</link>
+    <description>Recent content on 文章中心</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 30 Jun 2021 14:11:51 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tainwindcss Setup</title>
+      <link>https://lajunta.github.io/hugoblog/fronted/html/tailwindsetup/</link>
+      <pubDate>Wed, 30 Jun 2021 14:11:51 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/fronted/html/tailwindsetup/</guid>
+      <description>Tailwindcss Setup Init tailwindcss 1 2 3 4 5 # install tailwindcss npm install -D tailwindcss@latest postcss@latest autoprefixer@latest # make default config file tailwind.config.js npx tailwindcss init tailwind.config.js 1 2 3 4 5 6 7 8 9 10 11 module.exports = { purge: [&amp;#39;./views/*.html&amp;#39;, &amp;#39;./src/app.scss&amp;#39;], darkMode: false, // or &amp;#39;media&amp;#39; or &amp;#39;class&amp;#39; theme: { extend: {}, }, variants: { extend: {}, }, plugins: [], } Include tailwindcss 1 2 3 4 /* src/app.</description>
+    </item>
+    
+    <item>
+      <title>Web App Steps</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/web-app-steps/</link>
+      <pubDate>Wed, 30 Jun 2021 08:34:10 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/web-app-steps/</guid>
+      <description>Golang web app steps First make a web server 1 2 3 4 5 6 func home(w http.ResponseWriter, r *http.Request) { tmpl.ExecuteTemplate(w, &amp;#34;Home&amp;#34;, nil) } http.HandleFunc(&amp;#34;/&amp;#34;,home) http.ListenAndServe(&amp;#34;:8080&amp;#34;,nil) Second make assets dir and path 1 2 3 4 5 //go:embed static/* views/* var assets embed.FS // add assets path http.Handle(&amp;#34;/assets/&amp;#34;, http.StripPrefix(&amp;#34;/assets/&amp;#34;, http.FileServer(http.FS(assets)))) Make template file and code 1 2 3 4 5 6 var ( tmpl *template.Template ) tmpl = template.Must(template.ParseFS(assets, &amp;#34;views/*.</description>
+    </item>
+    
+    <item>
+      <title>Printer Share Using Samba On Ubuntu</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-printer/</link>
+      <pubDate>Tue, 29 Jun 2021 16:40:14 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-printer/</guid>
+      <description>Printer Share On Ubuntu Edit smb.conf 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 [printers] comment = All Printers browseable = no path = /var/spool/samba printable = yes guest ok = no read only = yes create mask = 0700 valid users = dayin [print$] comment = Printer Drivers path = /var/lib/samba/printers browseable = yes read only = yes guest ok = no valid users = dayin Add user dayin 1 2 sudo useradd -M -N -s /bin/false -d /nonexsistent dayin sudo smbpasswd -a dayin Add creditial on windows 1 2 3 ip: server ip user: dayin psd: smbpasswd for dayin </description>
+    </item>
+    
+    <item>
+      <title>Wireguard</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/wireguard/</link>
+      <pubDate>Mon, 07 Jun 2021 08:34:10 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/wireguard/</guid>
+      <description>wireguard Links Archlinux Wireguard Tutorial
+VPN Server
+配置网络界面 1 ip link add dev wg0 type wireguard 增加IP地址 1 2 3 4 ip address add dev wg0 192.168.88.1/24 # 如果只是二个电脑相联 ip address add dev wg0 192.168.88.1 peer 192.168.88.2 通过配置文件进行配置 1 wg setconf wg0 myconfig.conf 激活界面 1 ip link set up dev wg0 查看显示界面 1 2 3 wg wg show wg showconf 生成钥匙 生成私钥
+1 2 umask 077 wg genkey &amp;gt; privatekey 生成公钥</description>
+    </item>
+    
+    <item>
+      <title>Using Grpc Transfer Binary File</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/grpc/filedownload/</link>
+      <pubDate>Thu, 29 Apr 2021 09:25:49 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/grpc/filedownload/</guid>
+      <description>Proto file 1 2 3 4 5 6 7 8 9 10 11 12 syntax = &amp;#34;proto3&amp;#34;; message Response { bytes fileChunk = 1; } message Request { string fileName = 1; } service TestService { rpc Download(Request) returns (stream Response); } Server code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 func (srv *Server) Download(req *pbgo.</description>
+    </item>
+    
+    <item>
+      <title>Vite App With Tailwind</title>
+      <link>https://lajunta.github.io/hugoblog/fronted/vue/vite-app-with-tailwind/</link>
+      <pubDate>Tue, 20 Apr 2021 08:27:20 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/fronted/vue/vite-app-with-tailwind/</guid>
+      <description>Initialize a vitejs app 1 2 3 4 yarn create @vitejs/app cd your app yarn yarn dev Install tailwindcss 1 2 yarn add -D @tailwindcss/jit tailwindcss@latest postcss@latest autoprefixer@latest postcss-cli@latest npx tailwindcss init -p ###modify postcss.config.js
+1 2 3 4 5 6 1 module.exports = { 2 plugins: { 3 &amp;#39;@tailwindcss/jit&amp;#39;: {}, 4 autoprefixer: {}, 5 }, 6 } modify tailwindcss.config.js remove unused classes 1 purge: [&amp;#39;./index.html&amp;#39;, &amp;#39;./src/**/*.{vue,js,ts,jsx,tsx}&amp;#39;], Include Tailwind in your css create .</description>
+    </item>
+    
+    <item>
+      <title>Crypto101</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</link>
+      <pubDate>Sun, 18 Apr 2021 09:28:57 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/crypto101/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Suid Sgid Sticky Bit</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</link>
+      <pubDate>Sat, 17 Apr 2021 09:31:33 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/suid-sgid-sticky-bit/</guid>
+      <description>Linux special directory/file permission setup SUID (+s | numercial code 4) 只有文件的所有者才能执行， 其它人不能执行
+1 chmod 4770 file SGID (+s | numercial code 2) 只有组的所有者才能执行，其它人不能执行
+1 chmod 2770 file | directory 如果设置在文件上,和suid一样，只有组的成员才能执行 如果设置在目录上,目录内新建的文件都会继承所在目录的组权限 Sticky bit (+t | numercial code 1) 只能加在目录上,目录内的文件,只有其所有者才能删除
+1 chmod 1777 file 1 2 [one@server test]$ ls -ld /tmp/ drwxrwxrwt. 15 root root 4096 Sep 28 19:28 /tmp/ </description>
+    </item>
+    
+    <item>
+      <title>Samba Guest Write</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-guest-write/</link>
+      <pubDate>Sat, 10 Apr 2021 09:26:46 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/samba-guest-write/</guid>
+      <description>Samba Server for guest user smb.conf
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 # Global parameters [global] server string = Temp Samba Server netbios name = R33 server role = standalone server map to guest = bad user guest account = zxy create mode = 664 inherit owner=yes inherit permissions=yes [文件收集] path = /var/collect read only = no writeable = yes write list = zxy public = yes guest ok = yes force user = zxy create mask = 0644 directory mask = 1777 File System operations 设置文件或者文件夹 不是文件夹所在组和用户</description>
+    </item>
+    
+    <item>
+      <title>Wordpress_steps</title>
+      <link>https://lajunta.github.io/hugoblog/programe/php/wordpress_steps/</link>
+      <pubDate>Fri, 09 Apr 2021 18:04:07 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/php/wordpress_steps/</guid>
+      <description>第三部分同学 明白各文件的意义 index.php functions.php 自定义函数 style.css 样式 single.php 文章 page.php 页面 category.php 列表 </description>
+    </item>
+    
+    <item>
+      <title>Get Json From Url</title>
+      <link>https://lajunta.github.io/hugoblog/programe/php/get_json_from_url/</link>
+      <pubDate>Fri, 09 Apr 2021 11:55:26 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/php/get_json_from_url/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 &amp;lt;?php get_header(); $url = &amp;#34;http://10.2.110.120:8080/wp-json/cyberbuf/news&amp;#34;; $json = file_get_contents($url); $news = json_decode($json); ?&amp;gt; &amp;lt;?php get_header(); $url = &amp;#34;http://10.</description>
+    </item>
+    
+    <item>
+      <title>Mongodb Backup and restore</title>
+      <link>https://lajunta.github.io/hugoblog/database/mongodb/backup/</link>
+      <pubDate>Tue, 06 Apr 2021 08:04:38 +0000</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/database/mongodb/backup/</guid>
+      <description>Mongodb Database dump restore 导出为 csv 格式 1 mongoexport --db myinfo --collection userdetails --csv --fields user_id,education,interest --out /opt/backups/userdetails.csv 按条件导出 1 mongoexport --db myinfo --collection userdetails --query &amp;#34;{&amp;#39;interest&amp;#39; : &amp;#39;MUSIC&amp;#39;}&amp;#34; 从csv 导入 1 mongoimport --db myinfo --collection userdetails --type csv --headerline --file /backup_data/backup/userdetails.csv 单数据库备份 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 #!</description>
+    </item>
+    
+    <item>
+      <title>Linux Netplan</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/netplan/</link>
+      <pubDate>Tue, 06 Apr 2021 14:17:04 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/netplan/</guid>
+      <description>Netplan config /etc/netplan/01-netcfg.yaml
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 network: version: 2 renderer: networkd ethernets: enp3s0: dhcp4: no dhcp6: no addresses: [172.16.145.240/24] #gateway4: 172.16.145.254 nameservers: addresses: [172.16.1.2,172.16.145.254] routes: - to: 172.16.144.248/24 via: 172.16.144.254 - to: 172.16.144.249/24 via: 172.16.144.254 - to: 0.0.0.0/0 via: 172.16.145.254 enp5s0: dhcp4: no dhcp6: no addresses: - 192.168.3.254/24 - 192.</description>
+    </item>
+    
+    <item>
+      <title>Frpc config</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/frpc/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:55 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/frpc/</guid>
+      <description>frpc client config file 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [common] server_addr = your_public_ip server_port = your_public_port token = your_secret_token tls_enable = true protocol = tcp pool_count = 5 [ssh] type = tcp local_ip = 127.0.0.1 local_port = 22 remote_port = your_public_ssh_port [lab] type = https local_port = 443 subdomain = lab [ku] type = https local_port = 443 custom_domains = your.</description>
+    </item>
+    
+    <item>
+      <title>Linux Firewall</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/firewall/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:44 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/firewall/</guid>
+      <description>A Firewall 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 iptables -F iptables -t nat -F iptables -X iptables -t filter -N DOCKER iptables -A INPUT -i lo -j ACCEPT iptables -P INPUT DROP iptables -P OUTPUT ACCEPT iptables -P FORWARD ACCEPT iptables -A INPUT -p tcp -m state --state ESTABLISHED -j ACCEPT iptables -A INPUT -p tcp -m multiport --dports 20,25,80,443 -j ACCEPT iptables -A INPUT -p udp -m multiport --dports 8000,8001 -j ACCEPT iptables -A INPUT -p udp -s 114.</description>
+    </item>
+    
+    <item>
+      <title>Cerbot </title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/certbot/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:37 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/certbot/</guid>
+      <description>Certbot setting 安装 certbot 1 2 3 4 5 6 7 sudo apt-get update sudo apt-get install software-properties-common sudo add-apt-repository universe sudo add-apt-repository ppa:certbot/certbot sudo apt-get update sudo apt-get install certbot 手动安装证书 1 sudo certbot certonly --manual --preferred-challenges dns 查看 1 sudo certbot certificates 更新 1 2 sudo certbot renew proxychains sudo certbot certonly --manual --preferred-challenges dns -d &amp;#34;*.qq.com,*.qq.com&amp;#34; 证书位置 1 2 /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem </description>
+    </item>
+    
+    <item>
+      <title>Candy V2 Config</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/caddyv2/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:30 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/caddyv2/</guid>
+      <description>Caddy Server V2 config 1 2 3 4 5 6 7 8 9 10 11 12 13 https://a.canbe.top { root * /var/www/html encode gzip reverse_proxy 127.0.0.1:9008 tls /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem } https://mpcroom.canbe.top { root * /home/ubuntu/static encode gzip file_server tls /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem } </description>
+    </item>
+    
+    <item>
+      <title>Sed 用法</title>
+      <link>https://lajunta.github.io/hugoblog/linux/commands/sed/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:20 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/commands/sed/</guid>
+      <description> 1 find . -type f -exec sed -i &amp;#39;1s;^;---\ntitle: &amp;#34;Test blog&amp;#34;\n---\n;&amp;#39; {} \; 查找并删除所在的行 1 find . -type f -exec sed -i &amp;#39;/^title:/d&amp;#39; {} \; 删除前面N,M行 1 find . -type f -exec sed -i &amp;#39;1,1d&amp;#39; {} \; </description>
+    </item>
+    
+    <item>
+      <title>Remove Match Group</title>
+      <link>https://lajunta.github.io/hugoblog/linux/commands/remove_match_gruop/</link>
+      <pubDate>Tue, 06 Apr 2021 14:16:04 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/commands/remove_match_gruop/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 #!/bin/bash if [[ $1 == &amp;#34;&amp;#34; || $2 == &amp;#34;&amp;#34; ]] ; then echo &amp;#34;格式为: addgroup.sh 名称 编号&amp;#34; exit 0 fi gname=$1$2 gnum=$2 userdel -r $gname rm -rf /home/$gname sed -i &amp;#34;/$gname/d&amp;#34; /etc/vsftpd.chroot_list sed -i &amp;#34;/$gname/d&amp;#34; /etc/vsftpd.userlist sitepath=&amp;#34;/etc/apache2/sites-available/$gname.conf&amp;#34; rm $sitepath a2dissite $gname systemctl reload apache2 systemctl reload vsftpd mysql -e &amp;#34;drop database if exists $gname;&amp;#34; mysql -e &amp;#34;revoke ALL PRIVILEGES on $gname.</description>
+    </item>
+    
+    <item>
+      <title>生成随机数</title>
+      <link>https://lajunta.github.io/hugoblog/linux/commands/gen_random_num/</link>
+      <pubDate>Tue, 06 Apr 2021 14:15:57 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/commands/gen_random_num/</guid>
+      <description>生成随机数 xxd 1 xxd -g 2 -l 64 -p /dev/random | tr -d &amp;#34;\n&amp;#34; openssl 1 openssl passwd -5 -salt xyz &amp;#34;yourpassword&amp;#34; | base64 head 1 cat /dev/urandom | base32 | head -c 64 </description>
+    </item>
+    
+    <item>
+      <title>Add Match Group</title>
+      <link>https://lajunta.github.io/hugoblog/linux/commands/add_match_group/</link>
+      <pubDate>Tue, 06 Apr 2021 14:15:19 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/commands/add_match_group/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 #!/bin/bash if [[ $1 == &amp;#34;&amp;#34; || $2 == &amp;#34;&amp;#34; ]] ; then echo &amp;#34;格式为: addgroup.</description>
+    </item>
+    
+    <item>
+      <title>Mysql Basic</title>
+      <link>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</link>
+      <pubDate>Tue, 06 Apr 2021 14:14:52 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/database/mysql/useradmin/</guid>
+      <description>Add and Grand user 1 2 3 4 5 6 CREATE DATABASE database_name; CREATE USER &amp;#39;newuser&amp;#39;@&amp;#39;10.8.0.5&amp;#39; IDENTIFIED BY &amp;#39;user_password&amp;#39;; GRANT ALL PRIVILEGES ON database_name.* TO &amp;#39;database_user&amp;#39;@&amp;#39;localhost&amp;#39;; Alter user password 1 alter user &amp;#39;username&amp;#39;@&amp;#39;localhost&amp;#39; identified by &amp;#39;user_password&amp;#39;; Drop user 1 drop user &amp;#39;user&amp;#39;@&amp;#39;localhost&amp;#39;; </description>
+    </item>
+    
+    <item>
+      <title>Mongodb User Privileges</title>
+      <link>https://lajunta.github.io/hugoblog/database/mongodb/user/</link>
+      <pubDate>Tue, 06 Apr 2021 14:12:14 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/database/mongodb/user/</guid>
+      <description>Mongodb User role operation https://www.guru99.com/mongodb-create-user.html
+添加超级管理员 1 2 3 4 5 6 7 db.createUser( {	user: &amp;#34;Guru99&amp;#34;, pwd: &amp;#34;password&amp;#34;, roles:[{role: &amp;#34;userAdminAnyDatabase&amp;#34; , db:&amp;#34;admin&amp;#34;}]}) 添加单个数据库管理员 1 2 3 4 5 6 7 db.createUser( { user: &amp;#34;Employeeadmin&amp;#34;, pwd: &amp;#34;password&amp;#34;, roles:[{role: &amp;#34;userAdmin&amp;#34; , db:&amp;#34;Employee&amp;#34;}]}) 添加普通用户 1 2 3 4 5 6 7 8 9 10 11 12 13 14 db.createUser( { user: &amp;#34;Mohan&amp;#34;, pwd: &amp;#34;password&amp;#34;, roles:[ { role: &amp;#34;read&amp;#34; , db:&amp;#34;Marketing&amp;#34;}, role: &amp;#34;readWrite&amp;#34; , db:&amp;#34;Sales&amp;#34;} } ] }) </description>
+    </item>
+    
+    <item>
+      <title>Emmet语法</title>
+      <link>https://lajunta.github.io/hugoblog/fronted/html/emmet/</link>
+      <pubDate>Tue, 06 Apr 2021 14:11:51 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/fronted/html/emmet/</guid>
+      <description>Emmet语法 下一代 &amp;gt; nav&amp;gt;ul&amp;gt;li
+1 2 3 4 5 &amp;lt;nav&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/nav&amp;gt; 同一代 + div+p+bq
+1 2 3 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt; 上升一级 ^ div+div&amp;gt;p&amp;gt;span+em^bq
+1 2 3 4 5 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt; &amp;lt;/div&amp;gt; div+div&amp;gt;p&amp;gt;span+em^^bq
+1 2 3 4 5 &amp;lt;div&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;p&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;blockquote&amp;gt;&amp;lt;/blockquote&amp;gt; 成组 () div&amp;gt;(header&amp;gt;ul&amp;gt;li*2&amp;gt;a)+footer&amp;gt;p
+1 2 3 4 5 6 7 8 9 10 11 &amp;lt;div&amp;gt; &amp;lt;header&amp;gt; &amp;lt;ul&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/header&amp;gt; &amp;lt;footer&amp;gt; &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/footer&amp;gt; &amp;lt;/div&amp;gt; (div&amp;gt;dl&amp;gt;(dt+dd)*3)+footer&amp;gt;p</description>
+    </item>
+    
+    <item>
+      <title>Golang Hello Web</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/hello/</link>
+      <pubDate>Tue, 06 Apr 2021 13:04:40 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/hello/</guid>
+      <description>介绍 Go 语言已经内置了一个网页服务器.标准库的net/http包包含了HTTP协议的所有功能,如HTTP客户端和服务端功能,在本例中你会发现创建一个网页服务端是多么的简单。
+路由及处理请求的函数 首先创建一个函数来处理从浏览器发来的所有HTTP连接,函数签名:
+1 func(w http.ResponseWriter, r *http.Request) 这个函数包含二个参数:
+第一个是你要写入接口,你将会把你的输出写到这个接口中
+第二个是浏览器发来的请求，你可以检查并处理其中的相关信息
+把路由和函数结合起来,形成最终的处理函数:
+1 2 3 http.HandleFunc(&amp;#34;/&amp;#34;, func (w http.ResponseWriter, r *http.Request)){ fmt.Fprintf(w, &amp;#34;你请求的网址是: %s\n&amp;#34;, r.URL.Path) } 监听HTTP连接 路由请求处理函数不能接收到任何外部的HTTP连接,需要一个HTTP服务函数来监听并转发相关的请求到处理函数
+1 http.ListenAndServe(&amp;#34;:80&amp;#34;,nil) 完整代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; ) // indexHandler handle request to url path &amp;#34;/&amp;#34; func indexHandler(w http.ResponseWriter, r *http.Request){ fmt.Fprintf(w, &amp;#34;你请求的网址是: %s\n&amp;#34;, r.</description>
+    </item>
+    
+    <item>
+      <title>Basic Plugin for vscode</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vscode/basicplugin/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vscode/basicplugin/</guid>
+      <description>常用插件 Gitlens CodeSnap Python C/C++ Prettier Visual Studio IntelliCode vscode-icons code runner yaml go ruby Ruby Solargraph dart flutter markdown all in one Rest client rainbow csv </description>
+    </item>
+    
+    <item>
+      <title>Basic vscode usage</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vscode/basicusage/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vscode/basicusage/</guid>
+      <description>基本用法 多光标编辑 盒子选择 按shift+alt 拖选 文本块 按shift+alt+方向键上 或者 shift+alt+方向键下选择在当前光标上或下插入新光标 按alt+click在任意地方添加光标 按ctrl+shift+L,可以选定当前的选择的字符的所的实例。 按ctrl+F2,可以选定当前的选择的字符的所的实例。 智能提示 ctrl+space 可以出现提示框，显示相应的函数和填充选择
+行操作 ctrl+c 拷贝光标当前行 alt+向上/向下 移动当前行或选择的多行 ctrl+shift+k 删除当前行或者选择的多行 ctrl+shift+alt+向上/向下 向上或者向下复制一行或者多行 ctrl+/ 注释或者取消 当前行或者多行 重命名 在某个单词或字符串上按 F2 可以选择并修改它，对整个工程文件夹有效
+也可以右键进行重命名
+文档格式化(美化排版) 按 ctrl+shift+I对整篇文档进行重新排版 按 ctrl+k ctrl+f 对选择的内容进行排版 代码折叠 在要折叠的行 按ctrl+shift+[ 进行折叠,按ctrl+shift+]展开 也可以在点击行号后面的 向下箭头进行折叠 ctrl+k ctrl+0 折叠全部 , ctrl+k ctrl+j展开全部 跳转 Ctrl+P 在多个文档间跳转 F12 跳转到符号定义, 在符号上方按住 Ctrl 可不跳转查看说明或预览 Ctrl+F12 跳转到实现 Ctrl+shift+0 在当前文件的符号间进行跳转 Ctrl+T 在多文件中查找函数或者符号定义 错误和警告 按 `F8`依次跳到不同的出错点进行检查并修改 JavaScript类型检查 使用 // @ts-check 进行检查 ,// @ts-nocheck 忽略检查</description>
+    </item>
+    
+    <item>
+      <title>Excel index and match </title>
+      <link>https://lajunta.github.io/hugoblog/windows/indexmatch/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/windows/indexmatch/</guid>
+      <description>Index and Match Match 语法 ** Match函数**
+使用 MATCH 函数在 范围 单元格中搜索特定的项，然后返回该项在此区域中的相对位置。
+MATCH(lookup_value, lookup_array, [match_type])
+MATCH 函数语法具有下列参数：
+1 2 3 4 5 6 7 lookup_value 必需。 要在 lookup_array 中匹配的值。 lookup_value 参数可以为值（数字、文本或逻辑值）或对数字、文本或逻辑值的单元格引用。 lookup_array 必需。 要搜索的单元格区域。 match_type 可选。 数字 -1、0 或 1。 此参数的默认值为 1 Match_type 行为 Match_type 行为 1 或省略 MATCH 查找小于或等于 lookup_value 的最大值。 lookup_array 参数中的值必须以升序排序，例如：&amp;hellip;-2, -1, 0, 1, 2, &amp;hellip;, A-Z, FALSE, TRUE。 0 MATCH 查找完全等于 lookup_value 的第一个值。 lookup_array 参数中的值可按任何顺序排列。 -1 MATCH 查找大于或等于 lookup_value 的最小值。 lookup_array 参数中的值必须按降序排列，例如：TRUE, FALSE, Z-A, &amp;hellip;2, 1, 0, -1, -2, &amp;hellip; 等等。 例子 农产品 计数 香蕉 二十五 橙子 38 苹果 40 梨 41 公式 说明 结果 =MATCH(39,B2:B5,1) 由于此处无精确匹配项，因此函数会返回单元格区域 B2:B5 中最接近的下个最小值 (38) 的位置。 2 =MATCH(41,B2:B5,0) 单元格区域 B2:B5 中值 41 的位置。 4 Index 语法 INDEX 函数返回表格或区域中的值或值的引用。</description>
+    </item>
+    
+    <item>
+      <title>Golang Http Server</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/server/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/server/</guid>
+      <description>HTTP Server 介绍 一个基本的服务器包括以下几项工作:
+处理动态请求 提供静态文件服务 接受连接 处理动态请求 net/http包包括了所有的请求和处理功能，我们能用http.HandleFunc注册一个新的路由。它的第一个参数是一个路径，第二个参数是一个处理函数。
+http.Request包括所有请求和参数信息，你可能使用r.URL.Query().Get(&amp;quot;token&amp;quot;) 处理GET参数，使用r.FormValue(&amp;quot;email&amp;quot;)处理 POST 参数。
+静态资源服务 我们使用内置的http.FileServer来处理静态文件如js,css和图片
+1 fs := http.FileServer(http.Dir(&amp;#34;static/&amp;#34;)) 我们的文件服务设置好后，我们需要指定一个路径给它。需要注意的是：我们需要把URL的一部分给去掉，这通常是静态文件的目录名:
+1 http.Handle(&amp;#34;/static/&amp;#34;,http.StripPrefix(&amp;#34;/static/&amp;#34;,fs)) 接收请求 1 http.ListenAndServe(&amp;#34;:80&amp;#34;,nil) 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 package main import( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; ) func main(){ http.HandleFunc(&amp;#34;/&amp;#34;,func(w http.ResponseWriter,r *http.Request){ fmt.Fprint(w,&amp;#34;welcome friend&amp;#34;) }) fs := http.FileServer(http.Dir(&amp;#34;static/&amp;#34;)) http.Handle(&amp;#34;/static/&amp;#34;,http.StripPrefix(&amp;#34;/static/&amp;#34;,fs)) http.ListenAndServe(&amp;#34;:80&amp;#34;,nil) } </description>
+    </item>
+    
+    <item>
+      <title>Golang mongodb driver usage</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/mongodb/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/mongodb/</guid>
+      <description>Golang and Mongodb connect crud Connect Database 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 package database import ( &amp;#34;context&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;time&amp;#34; &amp;#34;go.mongodb.org/mongo-driver/mongo&amp;#34; &amp;#34;go.mongodb.org/mongo-driver/mongo/options&amp;#34; ) var ( // DBClient is exposed db client DBClient *mongo.</description>
+    </item>
+    
+    <item>
+      <title>Golang Read JSON File</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/jsonfile/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/jsonfile/</guid>
+      <description>从文件中读取 JSON 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 package main import( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;io/ioutil&amp;#34; &amp;#34;log&amp;#34; ) type Config struct{ Name string `json:&amp;#34;name&amp;#34;` Awake bool `json:&amp;#34;awake&amp;#34;` Hungry bool `json:&amp;#34;hungry&amp;#34;` } func main(){ f, err := ioutil.ReadFile(&amp;#34;config.json&amp;#34;) if err != nil{ log.Fatal(err) } c := Config{} err = json.Unmarshal(f,&amp;amp;c) if err !</description>
+    </item>
+    
+    <item>
+      <title>Golang read toml file</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/toml/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/toml/</guid>
+      <description>Toml Config 从toml格式文件中读取配置
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 package main import( &amp;#34;fmt&amp;#34; &amp;#34;log&amp;#34; &amp;#34;github.com/BurnSushi/toml&amp;#34; ) type Config struct{ Name string Awake bool Hungry bool } func main(){ c := Config{} _, err := toml.DecodeFile(&amp;#34;config.toml&amp;#34;, &amp;amp;c) if err!= nil{ log.Fatal(err) } fmt.Printf(&amp;#34;+v\n&amp;#34;,c) } </description>
+    </item>
+    
+    <item>
+      <title>Golang sqlite3</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/sqlite3/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/sqlite3/</guid>
+      <description>Sqlite3 used by golang Create tables 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 db = dbConn() createSemester := ` create table if not exists semesters(id integer primary key, name text not null unique, short_name text not null unique, begin_on integer not null unique,end_on integer not null unique);` db.Exec(createSemester) createApply := ` create table if not exists applys(id integer primary key, applyer text not null,semester text not null,croom text not null, banji text not null, course text not null,wday text not null, jieci text not null, status text not null);` db.</description>
+    </item>
+    
+    <item>
+      <title>Golang template</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/template/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/template/</guid>
+      <description>模板 html/template包提供了丰富的模板语言，它通常能显示结构化的数据。它最大的好处是能自动对数据进行转义，不用担心 XSS攻击
+创建模板 先准备数据:
+1 2 3 4 5 6 7 8 data := TodoPageData{ PageTitle: &amp;#34;My TODO list&amp;#34;, Todos: []Todo{ {Title: &amp;#34;Task 1&amp;#34;, Done: false}, {Title: &amp;#34;Task 2&amp;#34;, Done: true}, {Title: &amp;#34;Task 3&amp;#34;, Done: true}, }, } 模板文件:
+1 2 3 4 5 6 7 8 9 10 11 12 {{ define &amp;#34;Index&amp;#34; }} &amp;lt;h1&amp;gt;{{.PageTitle}}&amp;lt;/h1&amp;gt; &amp;lt;ul&amp;gt; {{range .Todos}} {{if .Done}} &amp;lt;li class=&amp;#34;done&amp;#34;&amp;gt;{{.Title}}&amp;lt;/li&amp;gt; {{else}} &amp;lt;li&amp;gt;{{.Title}}&amp;lt;/li&amp;gt; {{end}} {{end}} &amp;lt;/ul&amp;gt; {{ end }} 从文件中获取模板 模板可以是字符串也可以是文件，从文件中获取</description>
+    </item>
+    
+    <item>
+      <title>Golang Test Json</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/json/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/json/</guid>
+      <description>JSON json 编码与解码例子
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 // json.go package main import ( &amp;#34;encoding/json&amp;#34; &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; ) type User struct { Firstname string `json:&amp;#34;firstname&amp;#34;` Lastname string `json:&amp;#34;lastname&amp;#34;` Age int `json:&amp;#34;age&amp;#34;` } func main() { http.HandleFunc(&amp;#34;/decode&amp;#34;, func(w http.ResponseWriter, r *http.Request) { var user User json.</description>
+    </item>
+    
+    <item>
+      <title>Gorilla Route</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/routing/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/routing/</guid>
+      <description>路由设计 net/http包提供了相对完整的http协议的功能,但是对于复杂的路由请求和解析，功能较弱，我们可以用第三方的gorilla/mux来完成这个事情。
+安装 gorilla/mux包 1 go get -u github.com/gorilla/mux 创建新路由 首先，先创建一个新的请求路由,它将做为你的应用的主路由并传给你的服务器，它接受所有的网页连接。
+1 router := mux.NewRouter() 注册一个请求处理函数 你可以像以前的处理函数一样使用它
+1 router.HandleFunc(path, handler) URL参数 gorilla/mux最强大的地方就是url的解析功能,它可以从url中提取相关的参数。
+1 /books/go-programming/page/10 上面的url有二个动态参数，go-programming 和 10
+为了对以上的动态参数进行匹配，在设计路由时，可以这样做:
+1 router.HandleFunc(&amp;#34;/books/{title}/page/{page}&amp;#34;,handler) 在handler 中可以众花括号中取得相应的值,mux.Vars(r)这个函数把请求做为参数：
+1 2 3 4 5 func(w http.ResponseWriter, r *http.Request){ vars := mux.Vars(r) title := vars[&amp;#34;title&amp;#34;] //get title page := vars[&amp;#34;page&amp;#34;] //get page } 表单数据依旧用 r.FormValue(&amp;quot;token&amp;quot;)来获取
+设置 HTTP Server 路由器 把 nil 更换为 router
+1 http.ListenAndServe(&amp;#34;:80&amp;#34;,router) 代码 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; &amp;#34;github.</description>
+    </item>
+    
+    <item>
+      <title>Gorilla session</title>
+      <link>https://lajunta.github.io/hugoblog/programe/golang/webasic/sessions/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/programe/golang/webasic/sessions/</guid>
+      <description>Sessions 使用 gorilla/sessions 来处理 sessions 数据
+1 go get github.com/gorilla/sessions Cookies 是每次用户访问服务器时会附带的一小段数据,用来维护连接的状态
+定义sessions 1 2 3 4 5 6 var ( // key must be 16, 24 or 32 bytes long (AES-128, AES-192 or AES-256) key = []byte(&amp;#34;super-secret-key&amp;#34;) cookieName := &amp;#34;your app cookie name&amp;#34; store = sessions.NewCookieStore(key) ) 获得 sessions value 1 2 3 4 5 6 session, _ := store.Get(r,cookieName) // Check if user is authenticated if auth, ok := session.</description>
+    </item>
+    
+    <item>
+      <title>Printer share</title>
+      <link>https://lajunta.github.io/hugoblog/windows/printer/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/windows/printer/</guid>
+      <description>Win10设置共享访问时提示需要密码的解决 适用于Win7、Win8、Win8.1、Win10在设置共享后，其它电脑访问共享时提示需要密码的解决方法。
+计算机（右键）》管理》本地用户和组》Guest（右键-设置密码-确定）即空密码。
+计算机（右键）》管理》本地用户和组》Guest（右键-取消帐户已禁用，点选“用户不能更改密码”和“密码永不过期”
+控制面板》网络和共享中心》更改高级共享设置》打开“启用文件和打印机共享”，点选 “关闭密码保护共享 ”
+调出“运行”（WIN7下：开始》运行；WIN8下 win+X）输入 gpedit.msc本地计算机策略》WINDOWS设置》安全设置》本地策略》安全选项》找到网络安全：LAN管理器身份验证级别（双击，设置为：仅发送NTLM响应)
+同时设置：本地计算机策略》WINDOWS设置》安全设置》本地策略》用户权限分配》拒绝从网络访问这台计算机（双击打开，删除里面的所有用户。
+计算机（右键）》管理》服务和应用程序》服务》TCP/IP NetBIOS Helper为启用状态。
+完成。搞定以上所有设置。共享需要密码，网络无法访问等问题都可解决。（前提局域是畅通的情况下）。</description>
+    </item>
+    
+    <item>
+      <title>Systemctl Timer sample</title>
+      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/systemctl_timer/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/systemctl_timer/</guid>
+      <description>Systemctl Service and Timer 服务样本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 [Unit] Description=Your App Service After=network.target [Service] Type=simple User=one WorkingDirectory=/path/to/your/apps Environment=PORT=9009 Environment=USER=someuser Environment=PASSWORD=somepassword Restart=on-failure RestartSec=5s ExecStart=/path/to/your/command [Install] WantedBy=multi-user.target 定时器样本 必须和服务同一名称
+1 2 3 4 5 6 7 8 9 10 [Unit] Description=Run certbot twice daily [Timer] OnCalendar=*-*-* 00,12:00:00 RandomizedDelaySec=43200 Persistent=true [Install] WantedBy=timers.target </description>
+    </item>
+    
+    <item>
+      <title>vim go config</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vim/vim-go/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vim/vim-go/</guid>
+      <description>VIM-GO PLUGIN Install Vim-Pathogen 1 2 mkdir -p ~/.vim/autoload ~/.vim/bundle &amp;amp;&amp;amp; \ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim Modify .vimrc 1 2 3 execute pathogen#infect() syntax on filetype plugin indent on Install Nerdtree 1 git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree Install vim-go 1 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go </description>
+    </item>
+    
+    <item>
+      <title>vim usage</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vim/usage/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vim/usage/</guid>
+      <description>usage Category: tools/vim Tags: Created: 2020-11-04T16:11:56+08:00 New and Save 1 2 3 4 5 6 7 8 9 10 11 12 :new file # new window above current window :vert new file # new window right current window :e filename # edit file :w # write current file :w filename # write to another file :q # quit and close current file :q! # without and alert :x # write and quit :wa # write all window file :qa # quit all window :xa # write and quit all window :qa!</description>
+    </item>
+    
+    <item>
+      <title>Vscode fronted plugin</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vscode/frontedplugin/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vscode/frontedplugin/</guid>
+      <description>Front End Developper VS Code Extensions 前端常用VSCODE 插件
+Live Server 实时浏览 Beautify 排版美化 Bracket Pair Colorizer 代码块加加亮 ESLINT js代码审核 Auto-rename tag 自动重命名标签 Auto close tag Filesize 文件大小 SynthWave&#39;84 Jupyter Chinese HTML CSS support Tailwind CSS IntelliSense Tailwind Docs </description>
+    </item>
+    
+    <item>
+      <title>VScode sync with github</title>
+      <link>https://lajunta.github.io/hugoblog/tools/vscode/sync/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/tools/vscode/sync/</guid>
+      <description>vscode sync setting 同步vscode的设置包括主题、snippet 、 快捷键
+1 2 Shift + Alt + U 上传 Shift + Alt + D 下载 扩展名 1 2 .code-snippets 为全局 snippets .go 为 go语言专用 snippets Snippet 保存的位置 1 $HOME/.config/Code/User/snippets </description>
+    </item>
+    
+    <item>
+      <title>Wordpress child theme</title>
+      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/child_theme/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/child_theme/</guid>
+      <description>Child Theme functions.php 1 2 3 4 5 6 7 8 9 &amp;lt;?php function add_assets(){ wp_enqueue_style(&amp;#34;mystyle&amp;#34;,get_stylesheet_uri()); wp_enqueue_style(&amp;#34;bootstrap_css&amp;#34;, get_stylesheet_directory_uri().&amp;#34;/bootstrap.min.css&amp;#34;); wp_enqueue_script(&amp;#34;bootstrap_js&amp;#34;, get_stylesheet_directory_uri().&amp;#34;/bootstrap.min.js&amp;#34;); } add_action(&amp;#34;wp_enqueue_scripts&amp;#34;,&amp;#34;add_assets&amp;#34;); &amp;gt; style.css 1 2 3 4 5 /* Theme Name: CyberBuf Template: blankslate /* *{margin:0;padding:0;box-sizing:border-box} </description>
+    </item>
+    
+    <item>
+      <title>Wordpress custom api</title>
+      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/custom_api/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/custom_api/</guid>
+      <description>Custom Api Endpoint 自定义 rest api 在wp-content =&amp;gt;themes =&amp;gt; 使用中的主题 =&amp;gt;functions.php 中 加入相关的代码
+1 2 3 4 5 6 7 8 9 10 function hello( $data ) { return array(array(&amp;#34;hello&amp;#34;=&amp;gt;&amp;#34;asfd&amp;#34;,&amp;#34;world&amp;#34;=&amp;gt;&amp;#34;dsfadsf&amp;#34;)); } add_action( &amp;#39;rest_api_init&amp;#39;, function () { register_rest_route( &amp;#39;iaa&amp;#39;, &amp;#39;/news&amp;#39;, array( &amp;#39;methods&amp;#39; =&amp;gt; &amp;#39;GET&amp;#39;, &amp;#39;callback&amp;#39; =&amp;gt; &amp;#39;hello&amp;#39;, ) ); } ); 就可以访问 /wp-json/iaa/news</description>
+    </item>
+    
+    <item>
+      <title>WordPress register menu</title>
+      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/register_menu/</link>
+      <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
+      
+      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/register_menu/</guid>
+      <description>Register Menu in WordPress 注册菜单 1 2 3 4 5 6 7 8 9 10 11 function custom_menus() { register_nav_menus( array( &amp;#39;primary&amp;#39; =&amp;gt; &amp;#39;Primary menu&amp;#39;, &amp;#39;secondary&amp;#39; =&amp;gt; &amp;#39;Secondary menu&amp;#39;, &amp;#39;tertiary&amp;#39; =&amp;gt; &amp;#39;Tertiary menu&amp;#39; ) ); } add_action( &amp;#39;init&amp;#39;, &amp;#39;custom_menus&amp;#39; ); 在前端使用菜单 1 2 3 4 5 6 7 8 9 10 11 12 13 wp_nav_menu( array( &amp;#39;theme_location&amp;#39; =&amp;gt; &amp;#39;primary&amp;#39;, &amp;#39;container&amp;#39; =&amp;gt; false, ) ); wp_nav_menu( array( &amp;#39;menu&amp;#39; =&amp;gt; &amp;#39;primary&amp;#39;, &amp;#39;container&amp;#39; =&amp;gt; false, ) ); </description>
+    </item>
+    
+  </channel>
+</rss>
