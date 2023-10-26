@@ -2,36 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>snippets on 文章中心</title>
-    <link>https://lajunta.github.io/hugoblog/tags/snippets/</link>
+    <link>https://lajunta.vercel.app/tags/snippets/</link>
     <description>Recent content in snippets on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Apr 2021 23:56:54 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/tags/snippets/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 23:56:54 +0800</lastBuildDate><atom:link href="https://lajunta.vercel.app/tags/snippets/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wordpress child theme</title>
-      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/child_theme/</link>
+      <link>https://lajunta.vercel.app/snippets/wordpress/child_theme/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/child_theme/</guid>
+      <guid>https://lajunta.vercel.app/snippets/wordpress/child_theme/</guid>
       <description>Child Theme functions.php 1 2 3 4 5 6 7 8 9 &amp;lt;?php function add_assets(){ wp_enqueue_style(&amp;#34;mystyle&amp;#34;,get_stylesheet_uri()); wp_enqueue_style(&amp;#34;bootstrap_css&amp;#34;, get_stylesheet_directory_uri().&amp;#34;/bootstrap.min.css&amp;#34;); wp_enqueue_script(&amp;#34;bootstrap_js&amp;#34;, get_stylesheet_directory_uri().&amp;#34;/bootstrap.min.js&amp;#34;); } add_action(&amp;#34;wp_enqueue_scripts&amp;#34;,&amp;#34;add_assets&amp;#34;); &amp;gt; style.css 1 2 3 4 5 /* Theme Name: CyberBuf Template: blankslate /* *{margin:0;padding:0;box-sizing:border-box} </description>
     </item>
     
     <item>
       <title>Wordpress custom api</title>
-      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/custom_api/</link>
+      <link>https://lajunta.vercel.app/snippets/wordpress/custom_api/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/custom_api/</guid>
+      <guid>https://lajunta.vercel.app/snippets/wordpress/custom_api/</guid>
       <description>Custom Api Endpoint 自定义 rest api 在wp-content =&amp;gt;themes =&amp;gt; 使用中的主题 =&amp;gt;functions.php 中 加入相关的代码
 1 2 3 4 5 6 7 8 9 10 function hello( $data ) { return array(array(&amp;#34;hello&amp;#34;=&amp;gt;&amp;#34;asfd&amp;#34;,&amp;#34;world&amp;#34;=&amp;gt;&amp;#34;dsfadsf&amp;#34;)); } add_action( &amp;#39;rest_api_init&amp;#39;, function () { register_rest_route( &amp;#39;iaa&amp;#39;, &amp;#39;/news&amp;#39;, array( &amp;#39;methods&amp;#39; =&amp;gt; &amp;#39;GET&amp;#39;, &amp;#39;callback&amp;#39; =&amp;gt; &amp;#39;hello&amp;#39;, ) ); } ); 就可以访问 /wp-json/iaa/news</description>
     </item>
     
     <item>
       <title>WordPress register menu</title>
-      <link>https://lajunta.github.io/hugoblog/snippets/wordpress/register_menu/</link>
+      <link>https://lajunta.vercel.app/snippets/wordpress/register_menu/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/snippets/wordpress/register_menu/</guid>
+      <guid>https://lajunta.vercel.app/snippets/wordpress/register_menu/</guid>
       <description>Register Menu in WordPress 注册菜单 1 2 3 4 5 6 7 8 9 10 11 function custom_menus() { register_nav_menus( array( &amp;#39;primary&amp;#39; =&amp;gt; &amp;#39;Primary menu&amp;#39;, &amp;#39;secondary&amp;#39; =&amp;gt; &amp;#39;Secondary menu&amp;#39;, &amp;#39;tertiary&amp;#39; =&amp;gt; &amp;#39;Tertiary menu&amp;#39; ) ); } add_action( &amp;#39;init&amp;#39;, &amp;#39;custom_menus&amp;#39; ); 在前端使用菜单 1 2 3 4 5 6 7 8 9 10 11 12 13 wp_nav_menu( array( &amp;#39;theme_location&amp;#39; =&amp;gt; &amp;#39;primary&amp;#39;, &amp;#39;container&amp;#39; =&amp;gt; false, ) ); wp_nav_menu( array( &amp;#39;menu&amp;#39; =&amp;gt; &amp;#39;primary&amp;#39;, &amp;#39;container&amp;#39; =&amp;gt; false, ) ); </description>
     </item>
     

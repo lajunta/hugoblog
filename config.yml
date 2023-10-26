@@ -1,4 +1,4 @@
-baseURL: https://lajunta.github.io/hugoblog/
+baseURL: https://lajunta.vercel.app/
 languageCode: zh-cn
 title: 文章中心
 theme: "blog_theme"

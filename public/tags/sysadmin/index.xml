@@ -2,63 +2,63 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>sysadmin on 文章中心</title>
-    <link>https://lajunta.github.io/hugoblog/tags/sysadmin/</link>
+    <link>https://lajunta.vercel.app/tags/sysadmin/</link>
     <description>Recent content in sysadmin on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Apr 2021 14:17:04 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Apr 2021 14:17:04 +0800</lastBuildDate><atom:link href="https://lajunta.vercel.app/tags/sysadmin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Netplan</title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/netplan/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/netplan/</link>
       <pubDate>Tue, 06 Apr 2021 14:17:04 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/netplan/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/netplan/</guid>
       <description>Netplan config /etc/netplan/01-netcfg.yaml
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 network: version: 2 renderer: networkd ethernets: enp3s0: dhcp4: no dhcp6: no addresses: [172.16.145.240/24] #gateway4: 172.16.145.254 nameservers: addresses: [172.16.1.2,172.16.145.254] routes: - to: 172.16.144.248/24 via: 172.16.144.254 - to: 172.16.144.249/24 via: 172.16.144.254 - to: 0.0.0.0/0 via: 172.16.145.254 enp5s0: dhcp4: no dhcp6: no addresses: - 192.168.3.254/24 - 192.</description>
     </item>
     
     <item>
       <title>Frpc config</title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/frpc/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/frpc/</link>
       <pubDate>Tue, 06 Apr 2021 14:16:55 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/frpc/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/frpc/</guid>
       <description>frpc client config file 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 [common] server_addr = your_public_ip server_port = your_public_port token = your_secret_token tls_enable = true protocol = tcp pool_count = 5 [ssh] type = tcp local_ip = 127.0.0.1 local_port = 22 remote_port = your_public_ssh_port [lab] type = https local_port = 443 subdomain = lab [ku] type = https local_port = 443 custom_domains = your.</description>
     </item>
     
     <item>
       <title>Linux Firewall</title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/firewall/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/firewall/</link>
       <pubDate>Tue, 06 Apr 2021 14:16:44 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/firewall/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/firewall/</guid>
       <description>A Firewall 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 iptables -F iptables -t nat -F iptables -X iptables -t filter -N DOCKER iptables -A INPUT -i lo -j ACCEPT iptables -P INPUT DROP iptables -P OUTPUT ACCEPT iptables -P FORWARD ACCEPT iptables -A INPUT -p tcp -m state --state ESTABLISHED -j ACCEPT iptables -A INPUT -p tcp -m multiport --dports 20,25,80,443 -j ACCEPT iptables -A INPUT -p udp -m multiport --dports 8000,8001 -j ACCEPT iptables -A INPUT -p udp -s 114.</description>
     </item>
     
     <item>
       <title>Cerbot </title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/certbot/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/certbot/</link>
       <pubDate>Tue, 06 Apr 2021 14:16:37 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/certbot/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/certbot/</guid>
       <description>Certbot setting 安装 certbot 1 2 3 4 5 6 7 sudo apt-get update sudo apt-get install software-properties-common sudo add-apt-repository universe sudo add-apt-repository ppa:certbot/certbot sudo apt-get update sudo apt-get install certbot 手动安装证书 1 sudo certbot certonly --manual --preferred-challenges dns 查看 1 sudo certbot certificates 更新 1 2 sudo certbot renew proxychains sudo certbot certonly --manual --preferred-challenges dns -d &amp;#34;*.qq.com,*.qq.com&amp;#34; 证书位置 1 2 /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem </description>
     </item>
     
     <item>
       <title>Candy V2 Config</title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/caddyv2/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/caddyv2/</link>
       <pubDate>Tue, 06 Apr 2021 14:16:30 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/caddyv2/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/caddyv2/</guid>
       <description>Caddy Server V2 config 1 2 3 4 5 6 7 8 9 10 11 12 13 https://a.canbe.top { root * /var/www/html encode gzip reverse_proxy 127.0.0.1:9008 tls /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem } https://mpcroom.canbe.top { root * /home/ubuntu/static encode gzip file_server tls /etc/letsencrypt/live/canbe.top/fullchain.pem /etc/letsencrypt/live/canbe.top/privkey.pem } </description>
     </item>
     
     <item>
       <title>Systemctl Timer sample</title>
-      <link>https://lajunta.github.io/hugoblog/linux/sysadmin/systemctl_timer/</link>
+      <link>https://lajunta.vercel.app/linux/sysadmin/systemctl_timer/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/linux/sysadmin/systemctl_timer/</guid>
+      <guid>https://lajunta.vercel.app/linux/sysadmin/systemctl_timer/</guid>
       <description>Systemctl Service and Timer 服务样本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 [Unit] Description=Your App Service After=network.target [Service] Type=simple User=one WorkingDirectory=/path/to/your/apps Environment=PORT=9009 Environment=USER=someuser Environment=PASSWORD=somepassword Restart=on-failure RestartSec=5s ExecStart=/path/to/your/command [Install] WantedBy=multi-user.target 定时器样本 必须和服务同一名称
 1 2 3 4 5 6 7 8 9 10 [Unit] Description=Run certbot twice daily [Timer] OnCalendar=*-*-* 00,12:00:00 RandomizedDelaySec=43200 Persistent=true [Install] WantedBy=timers.target </description>
     </item>

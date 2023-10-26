@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on 文章中心</title>
-    <link>https://lajunta.github.io/hugoblog/tags/windows/</link>
+    <link>https://lajunta.vercel.app/tags/windows/</link>
     <description>Recent content in windows on 文章中心</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Apr 2021 23:56:54 +0800</lastBuildDate><atom:link href="https://lajunta.github.io/hugoblog/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Apr 2021 23:56:54 +0800</lastBuildDate><atom:link href="https://lajunta.vercel.app/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Excel index and match </title>
-      <link>https://lajunta.github.io/hugoblog/windows/indexmatch/</link>
+      <link>https://lajunta.vercel.app/windows/indexmatch/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/windows/indexmatch/</guid>
+      <guid>https://lajunta.vercel.app/windows/indexmatch/</guid>
       <description>Index and Match Match 语法 ** Match函数**
 使用 MATCH 函数在 范围 单元格中搜索特定的项，然后返回该项在此区域中的相对位置。
 MATCH(lookup_value, lookup_array, [match_type])
@@ -22,10 +22,10 @@ MATCH 函数语法具有下列参数：
     
     <item>
       <title>Printer share</title>
-      <link>https://lajunta.github.io/hugoblog/windows/printer/</link>
+      <link>https://lajunta.vercel.app/windows/printer/</link>
       <pubDate>Sun, 04 Apr 2021 23:56:54 +0800</pubDate>
       
-      <guid>https://lajunta.github.io/hugoblog/windows/printer/</guid>
+      <guid>https://lajunta.vercel.app/windows/printer/</guid>
       <description>Win10设置共享访问时提示需要密码的解决 适用于Win7、Win8、Win8.1、Win10在设置共享后，其它电脑访问共享时提示需要密码的解决方法。
 计算机（右键）》管理》本地用户和组》Guest（右键-设置密码-确定）即空密码。
 计算机（右键）》管理》本地用户和组》Guest（右键-取消帐户已禁用，点选“用户不能更改密码”和“密码永不过期”
